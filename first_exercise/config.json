@@ -6,5 +6,10 @@
   "memory_limit": 536870912,
   "time_limit": 60,
   "programming_language": "CVG",
-  "description": "This is my first CVG exercise"
+  "description": {
+    "names": {
+      "nl": "Mijn eerste CVG oefening",
+      "en": "My first CFC exercise"
+    }
+  }
 }
