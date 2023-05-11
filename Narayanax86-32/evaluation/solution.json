@@ -1,0 +1,75 @@
+{
+  "nodes": ["0,1,2", "4,5", "6,7", "8,9", "10,11", "12,13", "3"],
+  "edges": [
+    {
+      "dashes": false,
+      "from": "0,1,2",
+      "to": "4,5"
+    },
+    {
+      "dashes": true,
+      "from": "0,1,2",
+      "to": "3"
+    },
+    {
+      "dashes": true,
+      "from": "4,5",
+      "to": "6,7"
+    },
+    {
+      "dashes": false,
+      "from": "4,5",
+      "to": "8,9"
+    },
+    {
+      "dashes": false,
+      "from": "6,7",
+      "to": "12,13"
+    },
+    {
+      "dashes": false,
+      "from": "6,7",
+      "to": "10,11"
+    },
+    {
+      "dashes": false,
+      "from": "6,7",
+      "to": "3"
+    },
+    {
+      "dashes": false,
+      "from": "8,9",
+      "to": "4,5"
+    },
+    {
+      "dashes": true,
+      "from": "8,9",
+      "to": "10,11"
+    },
+    {
+      "dashes": false,
+      "from": "10,11",
+      "to": "4,5"
+    },
+    {
+      "dashes": true,
+      "from": "10,11",
+      "to": "12,13"
+    },
+    {
+      "dashes": false,
+      "from": "12,13",
+      "to": "12,13"
+    },
+    {
+      "dashes": false,
+      "from": "12,13",
+      "to": "10,11"
+    },
+    {
+      "dashes": false,
+      "from": "12,13",
+      "to": "3"
+    }
+  ]
+}
