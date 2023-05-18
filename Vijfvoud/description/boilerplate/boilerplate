@@ -1,16 +1,12 @@
-vijfvoud:   push edx
-            push ebx
-            cmp eax,0
+vijfvoud:   cmp eax,0
             jg positief
             xor eax, eax
-            pop ebx
-            pop edx
             ret
 positief:
-            mov ebx, 5
-            imul ebx
-            pop ebx
-            pop edx
+            push rdx
+            mov rdx,5
+            imul rdx
+            pop rdx
             ret
 main:       mov eax, 6
             call vijfvoud

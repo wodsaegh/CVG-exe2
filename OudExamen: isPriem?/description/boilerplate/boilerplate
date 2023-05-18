@@ -1,18 +1,33 @@
-narayana:
-	movl	4(%esp), %edi
-	movl	$0, %eax
-	call	narayana_hulp
-	ret
-narayana_hulp:
-	cmpl	$2, %edi
-	jg	.L4
-	incl	%eax
-	ret
-.L4:
-	decl	%edi
-	call	narayana_hulp
-	subl	$2, %edi
-	call	narayana_hulp
-	addl	$3, %edi
-	ret
-	
+_ispriem:
+        subq $8, %rsp
+        cmpl $1, %edi
+        jle .L2
+        movl %esi, %edx
+        movl %esi, %eax
+        sarl $31, %edx
+        idivl %edi
+        movl $0, %eax
+        testl %edx, %edx
+        je .L4
+        subl $1, %edi
+        call _ispriem
+        jmp .L4
+.L2:    cmpl $1, %esi
+        setg %al
+        movzbl %al, %eax
+.L4:    addq $8, %rsp
+        ret
+ispriem:
+        subq $8, %rsp
+        movl %edi, %esi
+        sarl $1, %edi
+        call _ispriem
+        addq $8, %rsp
+        ret
+main:
+        subq $8, %rsp
+        movl $11, %edi
+        call ispriem
+        movl %eax, g
+        addq $8, %rsp
+        ret
