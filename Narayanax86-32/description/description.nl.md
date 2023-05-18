@@ -1,5 +1,6 @@
-Dit is mijn allereerste CVG oefening.
+Maak een controleverloopgraaf van volgende assemblycode van de narayana functie:
 
+```
 narayana:
 movl 4(%esp), %edi
 movl $0, %eax
@@ -17,3 +18,4 @@ subl $2, %edi
 call narayana_hulp
 addl $3, %edi
 ret
+```
